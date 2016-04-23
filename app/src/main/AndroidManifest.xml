@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".CardActivity"/>
         <activity android:name=".AddCardActivity"/>
+        <activity android:name=".DataBaseList"/>
     </application>
 
 </manifest>
