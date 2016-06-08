@@ -20,14 +20,11 @@ public class TranslateData {
         return lang;
     }
 
-
-
     public TranslateData(){
     }
     public ArrayList<String> getTranslatedText() {
         return translatedText;
     }
-
 }
 
 
