@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:baselineAligned="true"
     android:divider="#375cc0"
-    android:dividerPadding="10dp"
-    android:paddingBottom="10dp"
-    android:paddingEnd="10dp"
-    android:paddingStart="10dp"
-    style="@style/Theme.Design">
+    >
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="английский"
-        android:ems="10"
         android:id="@+id/editText"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:theme="@style/Base.TextAppearance.AppCompat.Title"
-        style="@style/Base.Widget.Design.TabLayout" />
+        />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="русский"
-        android:ems="10"
         android:id="@+id/editText2"
-        android:layout_gravity="center"
-        style="@style/Base.Widget.Design.TabLayout" />
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перевести с помощью Яндекс"
+        android:id="@+id/translateBtn"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onClick"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -39,4 +38,5 @@
         android:id="@+id/addBtn"
         android:layout_gravity="center_horizontal"
         android:onClick="onClick"/>
+
 </LinearLayout>

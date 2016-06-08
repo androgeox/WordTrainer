@@ -11,12 +11,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ru.georgiy.wordtrainer.MainActivity"
-    tools:showIn="@layout/activity_main">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/books">
 
     <Button
         android:layout_width="wrap_content"
@@ -26,5 +22,27 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="144dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open your XML file"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:layout_alignTop="@+id/openBtn"
+        android:layout_alignBottom="@+id/openBtn"
+        android:layout_toLeftOf="@+id/openBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/openBtn"
+        android:textAlignment="center"
+        android:text = "OpenXML"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
