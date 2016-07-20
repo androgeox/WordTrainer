@@ -6,24 +6,50 @@ import java.util.ArrayList;
 
 public class TranslateData {
 
-
-    @SerializedName("code")
-    private int responcseCode;
-
-    @SerializedName("text")
-    private ArrayList<String> translatedText = new ArrayList<>();
-
     @SerializedName("lang")
-    private static String lang;
+    private String mLang;
+    @SerializedName("code")
+    private int responseCode;
+    @SerializedName("text")
+    private String translatedText;
 
-    public static String getLang() {
-        return lang;
+    public TranslateData(String lang, int responseCode, String translatedText) {
+        this.mLang = lang;
+        this.responseCode = responseCode;
+        this.translatedText = translatedText;
     }
 
-    public TranslateData(){
+    public TranslateData() {
     }
-    public ArrayList<String> getTranslatedText() {
+
+    public String getmLang() {
+        return mLang;
+    }
+
+    public void setmLang(String mLang) {
+
+        this.mLang = mLang;
+    }
+
+    public String getLang() {
+        return mLang;
+
+    }
+
+    public int getResponseCode() {
+        return responseCode;
+    }
+
+    public void setResponseCode(int responseCode) {
+        this.responseCode = responseCode;
+    }
+
+    public String getTranslatedText() {
         return translatedText;
+    }
+
+    public void setTranslatedText(String translatedText) {
+        this.translatedText = translatedText;
     }
 }
 

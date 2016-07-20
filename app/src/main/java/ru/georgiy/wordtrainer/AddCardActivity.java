@@ -14,14 +14,15 @@ import android.widget.Toast;
 public class AddCardActivity extends Activity implements View.OnClickListener {
 
     public static final String RETURN_KEY = "RETURN_KEY";
-    private static EditText engText;
-    private EditText rustext;
+
+    private EditText engText;
+    public EditText rustext;
     private Button addBtn;
     private SQLiteDatabase db;
     private Cursor cursor;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.addcard_layout);
 
@@ -47,12 +48,22 @@ public class AddCardActivity extends Activity implements View.OnClickListener {
                     db.close();
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Toast toast = Toast.makeText(this, "add word exception", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(this, "addWord exception", Toast.LENGTH_SHORT);
                     toast.show();
                 }
                     finish();
                 break;
-
+            case R.id.translateBtn:
+                try {
+                    TranslateData translateData = new TranslateData();
+                    YandexTranslation translation = new YandexTranslation();
+                    translation.translateText(engText.getText().toString());
+//                    rustext.setText(translateData.getTranslatedText());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast toast = Toast.makeText(this, "Translate exception", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
         }
     }
 
