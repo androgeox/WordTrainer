@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, CardActivity.class);
                         startActivity(intent);
                         break;
-                    case R.id.openBtn:
-                        Intent openXml = new Intent(Intent.ACTION_GET_CONTENT);
+//                    case R.id.openBtn:
+//                        XmlReader
 
                 }
 

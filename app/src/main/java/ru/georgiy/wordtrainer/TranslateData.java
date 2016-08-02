@@ -51,6 +51,15 @@ public class TranslateData {
     public void setTranslatedText(String translatedText) {
         this.translatedText = translatedText;
     }
+
+    @Override
+    public String toString() {
+        return "TranslateData{" +
+                "mLang='" + mLang + '\'' +
+                ", responseCode=" + responseCode +
+                ", translatedText='" + translatedText + '\'' +
+                '}';
+    }
 }
 
 
