@@ -13,11 +13,11 @@ public class TranslateData {
     @SerializedName("text")
     private String translatedText;
 
-    public TranslateData(String lang, int responseCode, String translatedText) {
-        this.mLang = lang;
-        this.responseCode = responseCode;
-        this.translatedText = translatedText;
-    }
+//    public TranslateData(String lang, int responseCode, String translatedText) {
+//        this.mLang = lang;
+//        this.responseCode = responseCode;
+//        this.translatedText = translatedText;
+//    }
 
     public TranslateData() {
     }
@@ -27,7 +27,6 @@ public class TranslateData {
     }
 
     public void setmLang(String mLang) {
-
         this.mLang = mLang;
     }
 
