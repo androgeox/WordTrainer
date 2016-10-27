@@ -11,7 +11,7 @@ public class TranslateData {
     @SerializedName("code")
     private int responseCode;
     @SerializedName("text")
-    private String translatedText;
+    private Object translatedText;
 
 //    public TranslateData(String lang, int responseCode, String translatedText) {
 //        this.mLang = lang;
@@ -43,7 +43,7 @@ public class TranslateData {
         this.responseCode = responseCode;
     }
 
-    public String getTranslatedText() {
+    public Object getTranslatedText() {
         return translatedText;
     }
 

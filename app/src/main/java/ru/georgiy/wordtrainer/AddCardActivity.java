@@ -14,6 +14,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.util.Map;
 import java.util.logging.Logger;
 
 import okhttp3.OkHttpClient;
@@ -83,17 +87,24 @@ public class AddCardActivity extends Activity implements View.OnClickListener, C
     @Override
     public void onDestroy() {
         super.onDestroy();
-        cursor.close();
+//        cursor.close();
         db.close();
     }
 
     @Override
     public void onResponse(Call<TranslateData> call, Response<TranslateData> response) {
         if (response.isSuccessful()) {
-            TranslateData data = response.body();
-            int code = response.body().getResponseCode();
-            rustext.setText(data.getTranslatedText());
-            logger.info(data.getTranslatedText() + " " + code);
+//            TranslateData data = response.body();
+            String data = response.body().getTranslatedText().toString();
+//            int code = response.body().getResponseCode();
+            rustext.setText(data);
+//            logger.info(data + " " + code);
+//            Gson gson = new GsonBuilder().create();
+//            Map<String,String> map = gson.fromJson(response.body().toString(),Map.class);
+//            for (Map.Entry<String, String> e : map.entrySet()) {
+//                System.out.println(e.getKey() + " : " + e.getValue());
+//            }
+            System.out.println(data);
         }
     }
 

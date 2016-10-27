@@ -9,10 +9,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button button;
+    Button button, xml_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,25 +24,23 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_add);
         button = (Button) findViewById(R.id.startBtn);
-        assert button != null;
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        xml_button = (Button) findViewById(R.id.openBtn);
 
+        assert button != null;
+    }
+
+            public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.startBtn:
-                        Intent intent = new Intent(MainActivity.this, CardActivity.class);
+                        Intent intent = new Intent(this, CardActivity.class);
                         startActivity(intent);
                         break;
                     case R.id.openBtn:
-                        XmlReader reader = new XmlReader();
-                        reader.fillDataBase(getApplicationContext());
-
+                        Intent intent1 = new Intent(this, XMLDBList.class);
+                        startActivity(intent1);
+                        break;
                 }
-
             }
-        });
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -64,10 +63,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-//    @Override
-//    public void onClick(View v) {
-//        Intent intent = new Intent(MainActivity.this, CardActivity.class);
-//        startActivity(intent);
-//    }
 }

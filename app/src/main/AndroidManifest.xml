@@ -25,6 +25,7 @@
         <activity android:name=".CardActivity"/>
         <activity android:name=".AddCardActivity"/>
         <activity android:name=".DataBaseList"/>
+        <activity android:name=".XMLDBList"/>
     </application>
 
 </manifest>
